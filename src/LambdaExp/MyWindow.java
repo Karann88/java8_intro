@@ -14,7 +14,7 @@ public class MyWindow {
         // Window : object of JFrame
         JFrame frame = new JFrame("My Window"); // My Window is the title of the window.
         frame.setSize(400, 400); // set the size of the window (height = 400, width = 400)
-        // frame.setLayout(null); // If we pass 'null' in the argument of setLayout then
+        frame.setLayout(null); // If we pass 'null' in the argument of setLayout then
         // it'll invisible the click
         // me button and not allow to click on the window screen.
         frame.setLayout(new FlowLayout());
@@ -23,14 +23,14 @@ public class MyWindow {
         JButton button = new JButton("Click Me !!");
         // Every time we click on the button, it'll generate an event (Action Listener).
         // We can handle this event by using ActionListener interface.
-        // button.addActionListener(new ActionListener() {
+        button.addActionListener(new ActionListener() {
             // anonymous class
-            /* @Override
+            @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Button Click");
                 JOptionPane.showMessageDialog(null, "Hello, Button Click");
             }
-        }); */
+        });
 
         button.addActionListener( e -> {
             System.out.println("Button Click");
